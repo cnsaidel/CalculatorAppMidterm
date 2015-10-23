@@ -209,7 +209,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     
         
-        sender.backgroundColor.blueColor()
+//        sender.backgroundColor.blueColor()
         
         
         //edge case.
