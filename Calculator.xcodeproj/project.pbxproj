@@ -10,7 +10,6 @@
 		63DACD4819DC93FA009CD84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DACD4719DC93FA009CD84A /* AppDelegate.swift */; };
 		63DACD4A19DC93FA009CD84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DACD4919DC93FA009CD84A /* ViewController.swift */; };
 		63DACD4D19DC93FA009CD84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DACD4B19DC93FA009CD84A /* Main.storyboard */; };
-		63DACD4F19DC93FA009CD84A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DACD4E19DC93FA009CD84A /* Images.xcassets */; };
 		63DACD5219DC93FA009CD84A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DACD5019DC93FA009CD84A /* LaunchScreen.xib */; };
 		63DACD5E19DC93FA009CD84A /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DACD5D19DC93FA009CD84A /* CalculatorTests.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +30,6 @@
 		63DACD4719DC93FA009CD84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DACD4919DC93FA009CD84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63DACD4C19DC93FA009CD84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63DACD4E19DC93FA009CD84A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63DACD5119DC93FA009CD84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		63DACD5719DC93FA009CD84A /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DACD5C19DC93FA009CD84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				63DACD4719DC93FA009CD84A /* AppDelegate.swift */,
 				63DACD4919DC93FA009CD84A /* ViewController.swift */,
 				63DACD4B19DC93FA009CD84A /* Main.storyboard */,
-				63DACD4E19DC93FA009CD84A /* Images.xcassets */,
 				63DACD5019DC93FA009CD84A /* LaunchScreen.xib */,
 				63DACD4519DC93FA009CD84A /* Supporting Files */,
 			);
@@ -196,7 +193,6 @@
 			files = (
 				63DACD4D19DC93FA009CD84A /* Main.storyboard in Resources */,
 				63DACD5219DC93FA009CD84A /* LaunchScreen.xib in Resources */,
-				63DACD4F19DC93FA009CD84A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +335,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,8 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

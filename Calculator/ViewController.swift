@@ -124,16 +124,25 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
+    var colorUp = UIColor.whiteColor()
+     var colorDown = UIColor.orangeColor()
     
     
     
-    
-    //Day and Night button
-
+//changing the visal of the button with touchDown + touchUp
+    @IBAction func buttonTouchUp(sender: UIButton) {
+              sender.backgroundColor = colorUp
+        
+        
+    }
  
         
-
+    @IBAction func buttonTouchDown(sender: UIButton) {
         
+           sender.backgroundColor = colorDown
+
+    }
+    
         
     @IBOutlet weak var mySwitcher: UISwitch!
         
@@ -151,7 +160,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     
     
-    //problem not switching back to day
+//    problem not switching back to day
     func changeBackground() {
         if mySwitcher.on {
             self.view.backgroundColor = UIColor.whiteColor()
@@ -162,13 +171,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             self.view.backgroundColor = UIColor.blackColor()
             return
         }
-        
-     
+    
+    
         
     }
     
     
-
     
     
     //MARK: - ViewDidLoad
@@ -179,11 +187,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.pickerView.delegate = self;
         
         // Welcome message
-        let welcome = AVSpeechUtterance(string:    "blah, blah blah, blah, blah blah")
+        let welcome = AVSpeechUtterance(string:    "Hey there! Let's learn some numbers. Start tapping away!")
         welcome.voice = AVSpeechSynthesisVoice(language: "en-GB")
         mySpeechSynth.speakUtterance(welcome)
+        
+
  
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -202,7 +213,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     }
     
-
+    
     
     
     @IBAction func tappedNumber(sender: UIButton) {
@@ -237,13 +248,37 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             lastButtonWasMode = false
             valueString = ""
         }
-        valueString = valueString.stringByAppendingString(str)
+
         
+        //takes the value string and appends whatever button is pressed
+        //ex. user presses 1 but shows a 1 in a string, then 2 and it turns into a string called 12        
+        
+
+        
+                valueString = valueString.stringByAppendingString(str)
+        
+        
+        
+        
+        valueString = "\(total)"
         let formatter:NSNumberFormatter = NSNumberFormatter()
         formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         let n:NSNumber = formatter.numberFromString(valueString)!
         
         label.text = formatter.stringFromNumber(n)
+        mode = 0
+        
+        
+        
+        //this section was buggy. Had to copy and paste same exact code from another project.
+//        let formatter:NSNumberFormatter = NSNumberFormatter()
+//        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+//        
+//        //convert formatted number into a number that can be formatted. NSNumber
+//
+//        let n:NSNumber = formatter.numberFromString(valueString)!
+//        
+//        label.text = formatter.stringFromNumber(n)
         
         if(total == 0){
             
