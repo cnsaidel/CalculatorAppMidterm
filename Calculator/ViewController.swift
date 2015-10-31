@@ -149,7 +149,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     @IBAction func myDay(sender: AnyObject) {
         
-                println("Switched")
+                print("Switched")
                 changeBackground()
         
         
